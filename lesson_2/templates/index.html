@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css"/>
+</head>
+<body>
+<h1>Профиль пользователя {{ user.name }}</h1>
+<p>Ваш номер: {{ user.phone }}</p>
+<p>Ваша почта: {{ user.email }}</p>
+<p>Ваш Telegram: {{ user.telegram }}</p>
+
+<input name="phone" value="{{ value }}" />
+<input name="email" value="{{ email }}" />
+
+<h2>Вывод списка</h2>
+
+{% for item in items %}
+    <p>{{ item }}</p>
+{% endfor %}
+
+<h2>Ваши настройки доступа</h2>
+
+{% if is_blocked %}
+  <p>Вам закрыт доступ</p>
+{% else %}
+    <p>Вам открыт доступ</p>
+{% endif %}
+
+</body>
+</html>
