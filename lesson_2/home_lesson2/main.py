@@ -11,11 +11,9 @@ def get_user(id):
 def users():
     users = ['mike', 'mishel', 'adel', 'keks', 'kamila']
     term = request.args.get('term')
-    if term:
-        filtred_users = filter(lambda x: term in x, users)
-    else:
-        filtred_users = users
+    if not term:
         term = ''
+    filtred_users = filter(lambda x: term in x, users)
     return render_template('users/index.html', users=filtred_users, search=term)
 
 
