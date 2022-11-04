@@ -1,0 +1,13 @@
+{% extends "index.html "%}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('categories') }}">К категориям</a>
+        <a href="{{ url_for('add_news') }}">Добавить новость</a>
+        {% for new in news %}
+            <a href="{{ url_for('curr_news', news_id=new.id) }}"><h3>{{ new.title }}</h3></a>
+            <p>{{ new.text }}</p>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}

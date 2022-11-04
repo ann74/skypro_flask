@@ -1,0 +1,19 @@
+.test_form {
+    border: 2px solid red;
+    padding: 15px;
+}
+
+.link-butt {
+    font-size: 8px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    background: #ccc;
+}
+
+.link-butt:hover {
+    border: 3px solid black;
+    background: rgb(225, 225, 225);
+}

@@ -1,0 +1,7 @@
+{% extends "index.html "%}
+
+{% block content %}
+    {% for category in category_names %}
+        <a href="{{ url_for('category_news', category=category.name) }}">{{ category.name }}</a>
+    {% endfor %}
+{% endblock %}

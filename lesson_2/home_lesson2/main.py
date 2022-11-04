@@ -2,9 +2,10 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+
 @app.route('/users/<id>')
-def get_user(id):
-    return render_template('users/show.html', id=id)
+def get_user(ind):
+    return render_template('users/show.html', id=ind)
 
 
 @app.route('/users/')

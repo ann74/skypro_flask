@@ -1,0 +1,17 @@
+{% extends "index.html "%}
+
+{% block content %}
+    <h3>Добавить категорию</h3>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name }}
+        </p>
+        <p>
+            {{ form.is_published }}
+        </p>
+        <p>
+            {{ form.submit }}
+        </p>
+    </form>
+{% endblock %}
