@@ -42,6 +42,9 @@ def inert_news():
         db.session.add(news1)
         db.session.commit()
 
+with app.app_context():
+    db.drop_all()
+    db.create_all()
 
 if __name__ == '__main__':
     inert_news()
